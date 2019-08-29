@@ -1,7 +1,14 @@
 ## React Eğitim Video Serisi
 Bu repository React hakkında hazırlamış ve YouTube kanalımda(**Mehmet Ali FIRAT**) yayınlamış olduğum *__React-Redux Eğitim__* serisinde hazırladığım proje dosyalarını içermektedir.
 
-### -> Ders-6
+### -> Ders-7
+create-react-app scripti kullanılarak geliştirme ortamı oluşturuldu ve çalıştırıldı.
+
+    npx create-react-app user-app
+    cd user-app
+    npm start
+
+### Ders-6
 DOM olayları ile State güncellendi.
 
 ### Ders-5
