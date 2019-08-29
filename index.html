@@ -1,4 +1,5 @@
 <html lang="tr">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,6 +9,7 @@
     <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
     <title>İlk Element</title>
 </head>
+
 <body>
     <div id="root">Ben aslında yoğum...</div>
 </body>
@@ -18,35 +20,45 @@
 
     //function
     //class
-    function MyComponent() {
-        return(
-                <div>
-                    <h1>Adı: Mehmet Ali</h1>
-                    <h3>Durum: Çevrimiçi</h3>
-                </div>
-        )
-    }
+    // function MyComponent() {
+    //     return(
+    //             <div>
+    //                 <h1>Adı: Mehmet Ali</h1>
+    //                 <h3>Durum: Çevrimiçi</h3>
+    //             </div>
+    //     )
+    // }
 
-    const Comp = () => {
-        return(
-                <div>
-                    <h1>Adı: Mehmet Ali</h1>
-                    <h3>Durum: Çevrimiçi</h3>
-                </div>
-        )
-    }
+    // const Comp = () => {
+    //     return(
+    //             <div>
+    //                 <h1>Adı: Mehmet Ali</h1>
+    //                 <h3>Durum: Çevrimiçi</h3>
+    //             </div>
+    //     )
+    // }
 
     class Kisi extends React.Component {
+        // constructor(){
+        //     super();
+        //     this.state = {}
+        // }
+        state={
+            name: "Mehmet Ali",
+            state: "online"
+        }
         render(){
+            const {name, state} = this.state;
             return(
                 <div>
-                    <h1>Adı: Mehmet Ali</h1>
-                    <h3>Durum: Çevrimiçi</h3>
+                    <h1>Adı: {name}</h1>
+                    <h3>Durum: {state}</h3>
                 </div>
             )
         }
     }
 
-    ReactDOM.render(<Comp/>,document.getElementById('root'));
+    ReactDOM.render(<Kisi/>,document.getElementById('root'));
 </script>
+
 </html>
