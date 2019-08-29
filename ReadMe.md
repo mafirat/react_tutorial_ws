@@ -1,7 +1,10 @@
 # React Eğitim Video Serisi
 Bu repository React hakkında hazırlamış ve YouTube kanalımda(**Mehmet Ali FIRAT**) yayınlamış olduğum *__React-Redux Eğitim__* serisinde hazırladığım proje dosyalarını içermektedir.
 
-## -> Ders-17
+## -> Ders-18
+Uygulama hakkında bilgi verildi ve kullanılacak bileşenler eklendi.
+
+### Ders-17
 Higher Order Functions ve Higher Order Component yapısı anlatıldı. İçerisine aldığı bileşene LogButonu ekleyen ve fonksiyonu çalıştıran bir HOC eklendi. Bu bileşenin nasıl kullanıldığına dair örnekler yapıldı.
 
 ### Ders-16
