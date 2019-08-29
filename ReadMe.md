@@ -1,7 +1,10 @@
 ## React Eğitim Video Serisi
 Bu repository React hakkında hazırlamış ve YouTube kanalımda(**Mehmet Ali FIRAT**) yayınlamış olduğum *__React-Redux Eğitim__* serisinde hazırladığım proje dosyalarını içermektedir.
 
-### -> Ders-5
+### -> Ders-6
+DOM olayları ile State güncellendi.
+
+### Ders-5
 Sınıf tipinde bileşene State(Durum) nesnesi eklendi
 
 ### Ders-4
