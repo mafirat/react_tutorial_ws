@@ -4,12 +4,18 @@ class AddUser extends React.Component{
     state = {
         name:''
     }
+    componentDidMount(){
+        console.log('AddUser bileşeni Eklendi')
+    }
     submitHandler = (e) =>{
         e.preventDefault();
         this.props.addMethod(this.state.name);
         this.setState({
             name:''
         })
+    }
+    componentDidUpdate(prevProps,prevState){
+        console.log('AddUser bileşeni güncellendi', prevState, this.state)
     }
     changeHandler = (e) => {
         this.setState({
