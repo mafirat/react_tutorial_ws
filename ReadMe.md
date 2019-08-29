@@ -1,7 +1,18 @@
 # React Eğitim Video Serisi
 Bu repository React hakkında hazırlamış ve YouTube kanalımda(**Mehmet Ali FIRAT**) yayınlamış olduğum *__React-Redux Eğitim__* serisinde hazırladığım proje dosyalarını içermektedir.
 
-## -> Ders-14
+## -> Ders-15
+Yeni uygulama oluşturuldu. Uygulamaya ***react-router-dom*** paketi eklendi ve oluşturulan örnek sayfalar arasında yönlendirme işlemi yapıldı.
+
+App dosyasına Yönlendirme ile ilgili bileşenlerin eklenmesi
+
+    import { BrowserRouter, Route } from 'react-router-dom'
+
+Bir bileşeni ilgili route'a gidildiğinde gösterilmesi
+
+    <Route component={Home} path='/' exact/>
+
+### Ders-14
 Kullanici durum degistirme islemi yapildi. Dizi icindeki elemanı bulma isleminde yine **map()** metodu kullanıldı.
 
     let tUsers = this.state.users.map(us => {

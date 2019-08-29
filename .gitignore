@@ -9,6 +9,18 @@
 # production
 /user-app/build
 
+# dependencies
+/countries-app/node_modules
+/countries-app/.pnp
+.pnp.js
+
+# testing
+/countries-app/coverage
+
+# production
+/countries-app/build
+
+
 # misc
 .DS_Store
 .env.local
