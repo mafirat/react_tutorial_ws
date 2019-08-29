@@ -1,0 +1,21 @@
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script crossorigin src="https://unpkg.com/react@16/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <title>İlk Element</title>
+</head>
+<body>
+    <div id="root">Ben aslında yoğum...</div>
+</body>
+<script type="text/babel">
+    //const element = React.createElement('h1',{},'Hello React')
+    const ad = 'React';
+    const element = <h1>Merhaba {new Date().toLocaleTimeString()}</h1>
+
+    ReactDOM.render(element,document.getElementById('root'));
+</script>
+</html>
