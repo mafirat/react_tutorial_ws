@@ -1,7 +1,18 @@
 # React Eğitim Video Serisi
 Bu repository React hakkında hazırlamış ve YouTube kanalımda(**Mehmet Ali FIRAT**) yayınlamış olduğum *__React-Redux Eğitim__* serisinde hazırladığım proje dosyalarını içermektedir.
 
-## -> Ders-24
+## -> Ders-25
+App bileşeni react-redux paketinden gelen ***connect*** Higher order function ile store'a bağlandı. bağlanırken de store üzerinen erişilmek istenen ortak state alanıdan gerekli kısımları bu bileşen için propslara çeviren metod yazılarak connect işlemine değil edildi.
+
+    const mapStateToProps =(state)=> {
+      return {
+        users : state.users
+      };
+    }
+
+    export default connect(mapStateToProps)(App);
+
+### Ders-24
 store oluşturuldu ve çalışması için gerekli olan reducer oluşturulup parametre olarak verildi. App bileşeni bu sayede store'dan haberdar edildi.
 Eklenen modüller ve bileşenler:
 

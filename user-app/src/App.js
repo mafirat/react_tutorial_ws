@@ -1,18 +1,10 @@
 import React from 'react';
+import {connect} from 'react-redux'
 
 import AddUser from './components/AddUser'
 import UserList from './components/UserList'
 
 class App extends React.Component {
-  state = {
-    idx: 4,
-    users: [
-      { name: "Mehmet", state: "online", id: 1 },
-      { name: "Ali", state: "offline", id: 2 },
-      { name: "Fırat", state: "busy", id: 3 }
-    ]
-  }
-
   stateChangeHandler = (data) => {
     let tUsers = this.state.users.map(us => {
       if (us.id === data.id) {
@@ -50,11 +42,12 @@ class App extends React.Component {
   }
 
   render() {
+    const {users} = this.props
     return (
       <div className="container-fluid">
         <div className="row">
           <div className="col-4">
-            <UserList users={this.state.users} delMethod={this.deleteMethod} stateChange={this.stateChangeHandler} />
+            <UserList users={users} delMethod={this.deleteMethod} stateChange={this.stateChangeHandler} />
 
             <hr />
             <AddUser addMethod={this.addMethod} />
@@ -65,4 +58,10 @@ class App extends React.Component {
   }
 }
 
-export default App;
+const mapStateToProps =(state)=> {
+  return {
+    users : state.users
+  };
+}
+
+export default connect(mapStateToProps)(App);
