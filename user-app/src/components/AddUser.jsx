@@ -1,5 +1,7 @@
 import React from 'react';
+import {connect} from 'react-redux'
 
+import {addUser} from '../actions/userActions'
 class AddUser extends React.Component{
     state = {
         name:''
@@ -9,7 +11,7 @@ class AddUser extends React.Component{
     }
     submitHandler = (e) =>{
         e.preventDefault();
-        this.props.addMethod(this.state.name);
+        this.props.addUser(this.state.name);
         this.setState({
             name:''
         })
@@ -31,4 +33,9 @@ class AddUser extends React.Component{
         )
     }
 }
-export default AddUser;
+const mapDispatchToProps = (dispatch)=>{
+    return{
+        addUser: (name)=>{dispatch(addUser(name))}
+    }
+}
+export default connect(null,mapDispatchToProps)(AddUser);

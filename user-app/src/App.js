@@ -26,21 +26,6 @@ class App extends React.Component {
     })
   }
 
-  addMethod = (name) => {
-    //[...arrayadi,nesne]
-    let id = this.state.idx;
-    let user = {
-      name: name,
-      state: 'online',
-      id: id
-    }
-    let tUsers = [...this.state.users, user]
-    this.setState({
-      users: tUsers,
-      idx: id + 1
-    })
-  }
-
   render() {
     const {users} = this.props
     return (
@@ -50,7 +35,7 @@ class App extends React.Component {
             <UserList users={users} delMethod={this.deleteMethod} stateChange={this.stateChangeHandler} />
 
             <hr />
-            <AddUser addMethod={this.addMethod} />
+            <AddUser />
           </div>
         </div>
       </div>

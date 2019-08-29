@@ -1,5 +1,8 @@
 import React from 'react';
 import {connect} from 'react-redux'
+
+import {deleteUser, changeUserState} from '../actions/userActions'
+
 class User extends React.Component {
     componentWillUnmount(){
         console.log('Bileşen çıkarıldı')
@@ -9,9 +12,9 @@ class User extends React.Component {
     }
     render() {
         console.log(this.props)
-        const { user, stateChange } = this.props
+        const { user } = this.props
         const changeHandler = (e) => {
-            stateChange({ state: e.target.value, id: user.id })
+            this.props.changeUserState(e.target.value, user.id)
         }
         return (
             <div className="card bg-light border-primary mb-3">
@@ -31,7 +34,8 @@ class User extends React.Component {
 }
 const mapDispatchToProps=(dispatch)=>{
     return {
-        deleteUser: (name)=>{ dispatch({type:'DELETE_USER', name:name})}
+        deleteUser: (name)=>{ dispatch(deleteUser(name))},
+        changeUserState: (state,id)=>{dispatch(changeUserState(state,id))}
     }
 }
 export default connect(null,mapDispatchToProps)(User);

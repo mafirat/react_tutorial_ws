@@ -1,7 +1,10 @@
 # React Eğitim Video Serisi
 Bu repository React hakkında hazırlamış ve YouTube kanalımda(**Mehmet Ali FIRAT**) yayınlamış olduğum *__React-Redux Eğitim__* serisinde hazırladığım proje dosyalarını içermektedir.
 
-## -> Ders-26
+## -> Ders-27
+Aksiyonlar bileşenin içerisinde yazılabileceği gibi bu aksiyonları tek bir konuma da toplanabilir. Bu uygulamada Kullanıcılar ile ilgili işlemler yapıldığı için userActions adı altında toplamak yeterli oldu, farklı varlık tipleri için de aksiyonlar yapılacağı için onları da farklı dosyalar altında toplanabilir. Bu sayade büyüyen projelerde aksyionları yönetmek daha basit bir hal alacaktır.
+
+### Ders-26
 User bileseni de store ile bağlandı ve App->UserList->User ilişkisi ile değil de doğrudan store'a erişip kullanıcı silme işlemini yapması için deleteUser aksiyonu reducer'a gönderildi (dispatch).
 Fonksiyonların da tıpkı state verileri gibi map edilmesi gerekmekte bunun için mapDispatchToProps metodu ile aksiyon yakalanır ve connect fonksiyonunun ilk parametre bloğundan state map etme fonksiyonundan sonra parametre olarak eklenir. Eğer ki sadece dispatch map ediliyorsa state kısmı null geçilir.
 Aksiyon tanımı bir javascript nesnesidir ve type parametresi olmalıdır, bu aksiyonun tipini belirtir ve reducer tarafından yakalandığında yapılacak işlemi belirlememizi sağlar, diğer parametreler reducer'a göndermek istediğimiz verileri içerebilir ve değişken sayıda olabilir.

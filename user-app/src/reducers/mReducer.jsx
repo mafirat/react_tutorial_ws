@@ -7,6 +7,7 @@ const initialState = {
   ]
 }
 const mReducer = (state = initialState, action) => {
+  console.log(action)
   if (action.type === 'DELETE_USER') {
     let tUsers = state.users.filter(us => {
       return us.name !== action.name
@@ -16,6 +17,26 @@ const mReducer = (state = initialState, action) => {
       users: tUsers
     }
   }
+  if (action.type === 'ADD_USER') {
+    let id = state.idx;
+    let user = {
+      name: action.name,
+      state: 'online',
+      id: id
+    }
+    return{
+      idx:id+1,
+      users: [...state.users,user]
+    }
+  }
+  // switch (action.type) {
+  //   case 'ADD_USER':
+      
+  //     break;
+  
+  //   default:
+  //     break;
+  // }
   return state;
 }
 export default mReducer;
