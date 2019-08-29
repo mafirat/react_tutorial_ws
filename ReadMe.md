@@ -1,7 +1,16 @@
-## React Eğitim Video Serisi
+# React Eğitim Video Serisi
 Bu repository React hakkında hazırlamış ve YouTube kanalımda(**Mehmet Ali FIRAT**) yayınlamış olduğum *__React-Redux Eğitim__* serisinde hazırladığım proje dosyalarını içermektedir.
 
-### -> Ders-8
+## -> Ders-9
+Liste ile çalışıldı. App bileşeni içerisindeki bir listeyi UserList bileşenine props olarak gönderildi. UserList içerisinde map fonskiyonu sayesinde her bir elemanı User bileşenine props olarak gönderildi.
+
+    array.map(item=> {
+      return(...)
+    })
+
+
+
+### Ders-8
 props ile bileşenler arası veri aktarımı yapıldı.
 
     <User name="Mehmet" state="online" metod={ConsoleLog} />

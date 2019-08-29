@@ -1,19 +1,28 @@
 import React from 'react';
 
-import User from './components/User'
+import UserList from './components/UserList'
 
 function ConsoleLog(data) {
   console.log('from App Module');
 }
 
-function App() {
-  return (
-    <div>
-      <User name="Mehmet" state="online"  metod={ConsoleLog} />
-      <User name="Ali" state="offline"  metod={ConsoleLog} />
-      <User name="Fırat" state="busy"  metod={ConsoleLog} />
-    </div>
-  );
+class App extends React.Component {
+  state={
+    users: [
+      {name:"Mehmet", state:"online", id:1},
+      {name:"Ali", state:"offline",id:2},
+      {name:"Fırat", state:"busy",id:3}
+    ]
+  }
+  render(){
+    return (
+      <div>
+        {
+          <UserList users={this.state.users}/>
+        }
+      </div>
+    );
+  }
 }
 
 export default App;
