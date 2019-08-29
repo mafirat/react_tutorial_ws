@@ -1,7 +1,12 @@
 # React Eğitim Video Serisi
 Bu repository React hakkında hazırlamış ve YouTube kanalımda(**Mehmet Ali FIRAT**) yayınlamış olduğum *__React-Redux Eğitim__* serisinde hazırladığım proje dosyalarını içermektedir.
 
-## -> Ders-22
+## -> Ders-23
+***user-app*** uygulamasına daha basit ve anlaşılır olduğu için geri dönüldü. **redux** ve **react-redux** paketleri npm sayesinde projeye eklendi
+
+    npm install redux react-redux
+
+### Ders-22
 Arama islemi eklendi. Api tarafından sağlanan end pointlerden arama için uygun olanı kullanılarak ülke adına göre arama ve eş zamanlı olarak listelemesi işlemi yapıldı.
 
     https://restcountries.eu/rest/v2/name/turk
