@@ -13,6 +13,18 @@ class App extends React.Component {
     ]
   }
 
+  stateChangeHandler = (data) => {
+    let tUsers = this.state.users.map(us => {
+      if (us.id === data.id) {
+        us.state = data.state
+      }
+      return us;
+    })
+    this.setState({
+      users:tUsers
+    })
+  }
+
   deleteMethod = (id) => {
     let tUsers = this.state.users.filter(us => {
       return us.id !== id
@@ -42,7 +54,7 @@ class App extends React.Component {
       <div className="container-fluid">
         <div className="row">
           <div className="col-4">
-            <UserList users={this.state.users} delMethod={this.deleteMethod} />
+            <UserList users={this.state.users} delMethod={this.deleteMethod} stateChange={this.stateChangeHandler} />
 
             <hr />
             <AddUser addMethod={this.addMethod} />

@@ -2,11 +2,11 @@ import React from 'react';
 
 import User from './User';
 
-const UserList = ({ users, delMethod }) => {
+const UserList = ({ users, delMethod, stateChange }) => {
 
     if (users.length > 0) {
         return users.map(user => {
-            return <User name={user.name} state={user.state} key={user.id} delMethod={() => delMethod(user.id)} />
+            return <User user={user} key={user.id} delMethod={() => delMethod(user.id)} stateChange={stateChange}  />
         })
     } else {
         return (

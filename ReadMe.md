@@ -1,7 +1,17 @@
 # React Eğitim Video Serisi
 Bu repository React hakkında hazırlamış ve YouTube kanalımda(**Mehmet Ali FIRAT**) yayınlamış olduğum *__React-Redux Eğitim__* serisinde hazırladığım proje dosyalarını içermektedir.
 
-## -> Ders-13
+## -> Ders-14
+Kullanici durum degistirme islemi yapildi. Dizi icindeki elemanı bulma isleminde yine **map()** metodu kullanıldı.
+
+    let tUsers = this.state.users.map(us => {
+      if (us.id === data.id) {
+        us.state = data.state
+      }
+      return us;
+    })
+
+### Ders-13
 Kullanıcı silme işlemi eklendi. Kullanıcı olmaması durumunda gösterilecek uyarı yapıldı. **filter()** metodu ile kullanıcıyı listeden çıkarıp yeni liste oluşturuldu.
 
     let tUsers = this.state.users.filter(us => {
