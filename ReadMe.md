@@ -1,7 +1,16 @@
 # React Eğitim Video Serisi
 Bu repository React hakkında hazırlamış ve YouTube kanalımda(**Mehmet Ali FIRAT**) yayınlamış olduğum *__React-Redux Eğitim__* serisinde hazırladığım proje dosyalarını içermektedir.
 
-## -> Ders-15
+## -> Ders-16
+***withRouter*** Higher Order Component ile **Navbar** bileşenine history eklendi. History sayesinde gelen metodların kullanımı gösterildi.
+Bir url'e yönlendirme
+
+    props.history.push('/path')
+Tarayıcı geçmişindeki bir önceki sayfaya gönderme
+
+    props.history.goBack()
+
+### Ders-15
 Yeni uygulama oluşturuldu. Uygulamaya ***react-router-dom*** paketi eklendi ve oluşturulan örnek sayfalar arasında yönlendirme işlemi yapıldı.
 
 App dosyasına Yönlendirme ile ilgili bileşenlerin eklenmesi

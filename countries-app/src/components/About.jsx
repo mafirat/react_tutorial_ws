@@ -1,6 +1,9 @@
 import React from 'react'
 
-const About =()=> {
+const About =(props)=> {
+    // setInterval(() => {
+    //     props.history.push('/contact')
+    // },2000);
     return(
         <div>
             <h3>Hakkında</h3>
