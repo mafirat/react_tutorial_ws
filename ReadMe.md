@@ -1,7 +1,17 @@
 # React Eğitim Video Serisi
 Bu repository React hakkında hazırlamış ve YouTube kanalımda(**Mehmet Ali FIRAT**) yayınlamış olduğum *__React-Redux Eğitim__* serisinde hazırladığım proje dosyalarını içermektedir.
 
-## -> Ders-11
+## -> Ders-12
+Node Package Manager(npm) ile _bootstrap_ frameworkü eklendi ve css düzenlemesi yapıldı.
+Kurulum
+
+    npm install bootstrap
+
+**index.js** dosyası içerisinde
+
+    import 'bootstrap/dist/css/bootstrap.min.css'
+
+### Ders-11
 Spread operatörü ile(**[...]**) dizi ve elemanları birleştirip yeni dizi yapma işlemi yapıldı ve ***setState*** metodu ile state güncelleme işlemi yapıldı.
 
     let tUsers = [...this.state.users,user]

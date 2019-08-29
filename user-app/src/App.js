@@ -13,28 +13,33 @@ class App extends React.Component {
     ]
   }
 
-  addMethod = (name)=>{
+  addMethod = (name) => {
     console.log('App modülü içerisinde', name)
     //[...arrayadi,nesne]
     let id = this.state.idx;
     let user = {
-      name:name,
-      state:'online',
-      id:id
+      name: name,
+      state: 'online',
+      id: id
     }
-    let tUsers = [...this.state.users,user]
+    let tUsers = [...this.state.users, user]
     this.setState({
-      users:tUsers,
-      idx: id+1
+      users: tUsers,
+      idx: id + 1
     })
   }
-  
+
   render() {
     return (
-      <div>
-        <UserList users={this.state.users} />
-        <hr/>
-        <AddUser addMethod={this.addMethod}/>
+      <div className="container-fluid">
+        <div className="row">
+          <div className="col-4">
+            <UserList users={this.state.users} />
+
+            <hr />
+            <AddUser addMethod={this.addMethod} />
+          </div>
+        </div>
       </div>
     );
   }

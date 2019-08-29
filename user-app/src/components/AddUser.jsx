@@ -19,8 +19,8 @@ class AddUser extends React.Component{
     render(){
         return(
             <form onSubmit={this.submitHandler}>
-                <input type="text" id="name" onChange={this.changeHandler} value={this.state.name}/>
-                <button>Kaydet</button>
+                <input className="form-control mb-2" type="text" id="name" onChange={this.changeHandler} value={this.state.name} placeholder="Kullanıcı Adı"/>
+                <button className="btn btn-outline-success btn-block">Kaydet</button>
             </form>
         )
     }
