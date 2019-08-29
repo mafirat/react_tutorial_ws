@@ -19,11 +19,28 @@ class Country extends React.Component {
     render() {
         const { country } = this.state;
         return (
-            <div className="card">
-                <div className="card-body">
-                    <h3>Ülke Adı: {country.name}</h3>
-                    <span>{country.nativeName}</span>
+            <div>
+                <h2>{country.nativeName}</h2>
+                <hr/>
+                <div className="card-columns">
+                <div className="card">
+                    <div className="card-body">
+                        <dl className="row">
+                            <dt className="col-sm-4">Başkent:</dt>
+                            <dd className="col-sm-8">{country.capital}</dd>
+
+                            <dt className="col-sm-4">Nüfus:</dt>
+                            <dd className="col-sm-8">{country.population}</dd>
+
+                            <dt className="col-sm-4">Alan:</dt>
+                            <dd className="col-sm-8">{country.area}</dd>
+                        </dl>
+                    </div>
                 </div>
+                <div className="card">
+                    <img src={country.flag} className="card-img-top" alt=""/>
+                </div>
+            </div>
             </div>
         )
     }

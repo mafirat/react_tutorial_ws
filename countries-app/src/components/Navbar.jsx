@@ -22,14 +22,9 @@ const Navbar = () => {
             </button>
             <div className="collapse navbar-collapse" id="navbarNav">
                 <ul className="navbar-nav">
-                    <li className="nav-item active">
-                        <Link className="nav-link" to="/">Ana Sayfa</Link>
-                    </li>
+
                     <li className="nav-item">
                         <Link className="nav-link" to="/about">Hakkında</Link>
-                    </li>
-                    <li className="nav-item">
-                        <Link className="nav-link" to="/contact">İletişim</Link>
                     </li>
                 </ul>
             </div>

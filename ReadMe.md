@@ -1,7 +1,14 @@
 # React Eğitim Video Serisi
 Bu repository React hakkında hazırlamış ve YouTube kanalımda(**Mehmet Ali FIRAT**) yayınlamış olduğum *__React-Redux Eğitim__* serisinde hazırladığım proje dosyalarını içermektedir.
 
-## -> Ders-21
+## -> Ders-22
+Arama islemi eklendi. Api tarafından sağlanan end pointlerden arama için uygun olanı kullanılarak ülke adına göre arama ve eş zamanlı olarak listelemesi işlemi yapıldı.
+
+    https://restcountries.eu/rest/v2/name/turk
+
+Ülke adına tıklandığında listelenen bilgiler artırıldı ve ülke bayrağı da gösterildi.
+
+### Ders-21
 Bir RestApi üzerinden api ile haberleşerek veri çekme işlemi anlatıldı. XmlHttpRequest işlemleri için ***axios*** paketi kullanıldı. Kullanılan rest api [RestCountries](https://restcountries.eu/)
 
 axios kurulumu:
