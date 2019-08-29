@@ -16,6 +16,37 @@
     const ad = 'React';
     const element = <h1>Merhaba {new Date().toLocaleTimeString()}</h1>
 
-    ReactDOM.render(element,document.getElementById('root'));
+    //function
+    //class
+    function MyComponent() {
+        return(
+                <div>
+                    <h1>Adı: Mehmet Ali</h1>
+                    <h3>Durum: Çevrimiçi</h3>
+                </div>
+        )
+    }
+
+    const Comp = () => {
+        return(
+                <div>
+                    <h1>Adı: Mehmet Ali</h1>
+                    <h3>Durum: Çevrimiçi</h3>
+                </div>
+        )
+    }
+
+    class Kisi extends React.Component {
+        render(){
+            return(
+                <div>
+                    <h1>Adı: Mehmet Ali</h1>
+                    <h3>Durum: Çevrimiçi</h3>
+                </div>
+            )
+        }
+    }
+
+    ReactDOM.render(<Comp/>,document.getElementById('root'));
 </script>
 </html>
