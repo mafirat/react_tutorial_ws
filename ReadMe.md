@@ -1,7 +1,23 @@
 # React Eğitim Video Serisi
 Bu repository React hakkında hazırlamış ve YouTube kanalımda(**Mehmet Ali FIRAT**) yayınlamış olduğum *__React-Redux Eğitim__* serisinde hazırladığım proje dosyalarını içermektedir.
 
-## -> Ders-20
+## -> Ders-21
+Bir RestApi üzerinden api ile haberleşerek veri çekme işlemi anlatıldı. XmlHttpRequest işlemleri için ***axios*** paketi kullanıldı. Kullanılan rest api [RestCountries](https://restcountries.eu/)
+
+axios kurulumu:
+
+    npm install axios
+
+axios ile veri alma(get):
+
+    axios.get('url')
+        .then(rsp => {
+            //data ile ilgili işlemler
+            //veri rsp.data içerisinde
+            })
+        })
+
+### Ders-20
 Bir bileşenin yaşam döngüsünden ve bu döngü içerisindeki metodlardan bahsedildi. ***user-app*** uygulamasında **AddUser** ve **User** bileşenleri sınıf tipine çevrilip örnekler yapıldı. En sık kullanılan metodlar;
 
   - Ekleme

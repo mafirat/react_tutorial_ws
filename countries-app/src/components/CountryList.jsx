@@ -1,19 +1,25 @@
 import React from 'react';
-import { Link } from 'react-router-dom'
-import Data from '../Data'
+import CountryCard from './CountryCard';
+
+import axios from 'axios'
 
 class CountryList extends React.Component {
+    state={
+        countries: []
+    }
+    componentDidMount(){
+        axios.get('https://restcountries.eu/rest/v2/all')
+        .then(rsp => {
+            //console.log(rsp.data)
+            this.setState({
+                countries:rsp.data.slice(0,20)
+            })
+        })
+    }
     render() {
-        const countryList = Data.map((ct, i) => {
+        const countryList = this.state.countries.map(ct => {
             return (
-                <div className="card mb-1" key={ct.numericCode}>
-                    <div className="card-body">
-                        <Link to={'/'+ ct.name}>
-                            <h5 className="card-title">{i + '-' + ct.name}</h5>
-                        </Link>
-                        <p>{ct.nativeName}</p>
-                    </div>
-                </div>
+                <CountryCard country={ct} key={ct.numericCode}/>
             )
         })
         return (
