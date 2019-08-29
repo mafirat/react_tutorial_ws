@@ -13,8 +13,16 @@ class App extends React.Component {
     ]
   }
 
+  deleteMethod = (id) => {
+    let tUsers = this.state.users.filter(us => {
+      return us.id !== id
+    })
+    this.setState({
+      users:tUsers
+    })
+  }
+
   addMethod = (name) => {
-    console.log('App modülü içerisinde', name)
     //[...arrayadi,nesne]
     let id = this.state.idx;
     let user = {
@@ -34,7 +42,7 @@ class App extends React.Component {
       <div className="container-fluid">
         <div className="row">
           <div className="col-4">
-            <UserList users={this.state.users} />
+            <UserList users={this.state.users} delMethod={this.deleteMethod} />
 
             <hr />
             <AddUser addMethod={this.addMethod} />

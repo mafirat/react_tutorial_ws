@@ -1,7 +1,14 @@
 # React Eğitim Video Serisi
 Bu repository React hakkında hazırlamış ve YouTube kanalımda(**Mehmet Ali FIRAT**) yayınlamış olduğum *__React-Redux Eğitim__* serisinde hazırladığım proje dosyalarını içermektedir.
 
-## -> Ders-12
+## -> Ders-13
+Kullanıcı silme işlemi eklendi. Kullanıcı olmaması durumunda gösterilecek uyarı yapıldı. **filter()** metodu ile kullanıcıyı listeden çıkarıp yeni liste oluşturuldu.
+
+    let tUsers = this.state.users.filter(us => {
+      return us.id !== id
+    })
+
+### Ders-12
 Node Package Manager(npm) ile _bootstrap_ frameworkü eklendi ve css düzenlemesi yapıldı.
 Kurulum
 
