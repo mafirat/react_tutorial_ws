@@ -1,7 +1,20 @@
 # React Eğitim Video Serisi
 Bu repository React hakkında hazırlamış ve YouTube kanalımda(**Mehmet Ali FIRAT**) yayınlamış olduğum *__React-Redux Eğitim__* serisinde hazırladığım proje dosyalarını içermektedir.
 
-## -> Ders-25
+## -> Ders-26
+User bileseni de store ile bağlandı ve App->UserList->User ilişkisi ile değil de doğrudan store'a erişip kullanıcı silme işlemini yapması için deleteUser aksiyonu reducer'a gönderildi (dispatch).
+Fonksiyonların da tıpkı state verileri gibi map edilmesi gerekmekte bunun için mapDispatchToProps metodu ile aksiyon yakalanır ve connect fonksiyonunun ilk parametre bloğundan state map etme fonksiyonundan sonra parametre olarak eklenir. Eğer ki sadece dispatch map ediliyorsa state kısmı null geçilir.
+Aksiyon tanımı bir javascript nesnesidir ve type parametresi olmalıdır, bu aksiyonun tipini belirtir ve reducer tarafından yakalandığında yapılacak işlemi belirlememizi sağlar, diğer parametreler reducer'a göndermek istediğimiz verileri içerebilir ve değişken sayıda olabilir.
+
+    const mapDispatchToProps=(dispatch)=>{
+    return {
+        deleteUser: (name)=>{ 
+          dispatch({type:'DELETE_USER', name:name})}
+      }
+    }
+    export default connect(null,mapDispatchToProps)(User);
+
+### Ders-25
 App bileşeni react-redux paketinden gelen ***connect*** Higher order function ile store'a bağlandı. bağlanırken de store üzerinen erişilmek istenen ortak state alanıdan gerekli kısımları bu bileşen için propslara çeviren metod yazılarak connect işlemine değil edildi.
 
     const mapStateToProps =(state)=> {
