@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { BrowserRouter, Route } from 'react-router-dom'
+import { BrowserRouter, Route, Switch } from 'react-router-dom'
 import LogButton from './LogButton'
 
 import Navbar from './components/Navbar';
@@ -8,6 +8,7 @@ import Navbar from './components/Navbar';
 import About from './components/About';
 import Contact from './components/Contact';
 import CountryList from './components/CountryList';
+import Country from './components/Country';
 
 function App() {
   //const contact = LogButton(Contact)
@@ -16,9 +17,12 @@ function App() {
       <BrowserRouter>
         <Navbar />
         <div className="container mt-2">
-          <Route component={CountryList} path='/' exact/>
-          <Route component={About} path='/about'/>
-          <Route component={LogButton(Contact)} path='/contact'/>
+          <Switch>
+            <Route component={CountryList} path='/' exact />
+            <Route component={About} path='/about' />
+            <Route component={LogButton(Contact)} path='/contact' />
+            <Route component={Country} path='/:name' />
+          </Switch>
         </div>
       </BrowserRouter>
     </div>

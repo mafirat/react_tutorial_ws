@@ -1,7 +1,10 @@
 # React Eğitim Video Serisi
 Bu repository React hakkında hazırlamış ve YouTube kanalımda(**Mehmet Ali FIRAT**) yayınlamış olduğum *__React-Redux Eğitim__* serisinde hazırladığım proje dosyalarını içermektedir.
 
-## -> Ders-18
+## -> Ders-19
+Country bileşeni eklenerek bir ülkeye tıklanınca ülkenin detayını gösterecek sayfa eklendi. Parametre gönderiminde ortaya çıkan sorunun çözülmesi için ***Switch*** metodundan faydalandı. Switch tüm path seçenekleri üzerinden tarama yapan ve eşleşmeye göre o bileşene ve path'e gitmeyi sağlayan bir bileşendir.
+
+### Ders-18
 Uygulama hakkında bilgi verildi ve kullanılacak bileşenler eklendi.
 
 ### Ders-17
