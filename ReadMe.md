@@ -1,7 +1,12 @@
 ## React Eğitim Video Serisi
 Bu repository React hakkında hazırlamış ve YouTube kanalımda(**Mehmet Ali FIRAT**) yayınlamış olduğum *__React-Redux Eğitim__* serisinde hazırladığım proje dosyalarını içermektedir.
 
-### -> Ders-7
+### -> Ders-8
+props ile bileşenler arası veri aktarımı yapıldı.
+
+    <User name="Mehmet" state="online" metod={ConsoleLog} />
+
+### Ders-7
 create-react-app scripti kullanılarak geliştirme ortamı oluşturuldu ve çalıştırıldı.
 
     npx create-react-app user-app
