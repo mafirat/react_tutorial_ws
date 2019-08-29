@@ -1,7 +1,10 @@
 # React Eğitim Video Serisi
 Bu repository React hakkında hazırlamış ve YouTube kanalımda(**Mehmet Ali FIRAT**) yayınlamış olduğum *__React-Redux Eğitim__* serisinde hazırladığım proje dosyalarını içermektedir.
 
-## -> Ders-16
+## -> Ders-17
+Higher Order Functions ve Higher Order Component yapısı anlatıldı. İçerisine aldığı bileşene LogButonu ekleyen ve fonksiyonu çalıştıran bir HOC eklendi. Bu bileşenin nasıl kullanıldığına dair örnekler yapıldı.
+
+### Ders-16
 ***withRouter*** Higher Order Component ile **Navbar** bileşenine history eklendi. History sayesinde gelen metodların kullanımı gösterildi.
 Bir url'e yönlendirme
 

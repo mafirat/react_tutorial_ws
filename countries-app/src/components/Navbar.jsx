@@ -3,6 +3,17 @@ import { Link, withRouter } from 'react-router-dom'
 
 
 const Navbar = () => {
+    //Higher Order Functions
+    // function toConsole(str1) {
+    //     return function (str2) {
+    //         console.log(str1 + ' '+ str2)
+    //     }
+    // }
+    // const selamla = toConsole('Merhaba');
+    // console.log(selamla)
+    // selamla('Mehmet')
+    // selamla('Ali')
+    // toConsole('Mehmet')('Ali')
     return (
         <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
             <Link className="navbar-brand" to="/">Ülkeler</Link>

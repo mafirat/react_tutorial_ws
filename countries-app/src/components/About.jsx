@@ -1,4 +1,5 @@
 import React from 'react'
+//import LogButton from '../LogButton'
 
 const About =(props)=> {
     // setInterval(() => {
@@ -12,4 +13,5 @@ const About =(props)=> {
     )
 }
 
+//export default LogButton(About);
 export default About;
